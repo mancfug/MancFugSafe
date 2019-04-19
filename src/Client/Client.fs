@@ -91,8 +91,10 @@ let navBrand =
     Navbar.Brand.div [ ]
         [ Navbar.Item.a
             [ Navbar.Item.Props [ Href "https://safe-stack.github.io/" ] ]
-            [ img [ Src "https://safe-stack.github.io/images/safe_top.png"
-                    Alt "Logo" ] ] ]
+            [ img [ Src "./FUG.jpeg";
+                      Alt "Logo";
+                      Style [ Width "100px"
+                              Height "100px" ] ] ] ]
 
 let navMenu =
     Navbar.menu [ ]
@@ -267,8 +269,7 @@ let footerContainer =
 let view (model : Model) (dispatch : Msg -> unit) =
     div [ ]
         [ Hero.hero
-            [ Hero.Color IsPrimary
-              Hero.IsMedium
+            [ Hero.IsMedium
               Hero.IsBold ]
             [ Hero.head [ ]
                 [ Navbar.navbar [ ]
