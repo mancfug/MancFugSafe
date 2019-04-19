@@ -30,7 +30,7 @@ type Msg =
 | Decrement
 | InitialCountLoaded of Result<Counter, exn>
 
-let initialCounter = fetchAs<Counter> "/api/init" (Decode.Auto.generateDecoder())
+let initialCounter = fetchAs<Counter> "/api/test/v1" (Decode.Auto.generateDecoder())
 
 // defines the initial state and initial command (= side-effect) of the application
 let init () : Model * Cmd<Msg> =
@@ -51,10 +51,10 @@ let init () : Model * Cmd<Msg> =
 let update (msg : Msg) (currentModel : Model) : Model * Cmd<Msg> =
     match currentModel.Counter, msg with
     | Some counter, Increment ->
-        let nextModel = { currentModel with Counter = Some { Value = counter.Value + 1 } }
+        let nextModel = { currentModel with Counter = Some { Value = counter.Value |> Option.map(fun x -> x + 1) } }
         nextModel, Cmd.none
     | Some counter, Decrement ->
-        let nextModel = { currentModel with Counter = Some { Value = counter.Value - 1 } }
+        let nextModel = { currentModel with Counter = Some { Value = counter.Value |> Option.map(fun x -> x - 1) } }
         nextModel, Cmd.none
     | _, InitialCountLoaded (Ok initialCount)->
         let nextModel = { Counter = Some initialCount }
