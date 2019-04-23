@@ -96,3 +96,5 @@ let config (webHost : WebHostBuilderContext) (cb : IConfigurationBuilder) =
     if env.IsDevelopment() then cb.AddUserSecrets(Assembly.GetExecutingAssembly()) |> ignore
 
 run (app.ConfigureAppConfiguration(config))
+
+// run app

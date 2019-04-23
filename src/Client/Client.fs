@@ -43,18 +43,19 @@ let update (msg : Msg) (currentModel : Model) : Model * Cmd<Msg> =
 
 let spinner = Icon.icon [ Icon.Size IsLarge ] [ Fa.i [ Fa.Solid.Spinner; Fa.Pulse; Fa.Size Fa.Fa3x ] [] ]
 
-let safeComponents =
+let safeComponents name =
     let components =
-        span [] [ span [ Href "https://saturnframework.github.io" ] [ str "Saturn" ]
+        span [ ClassName "main-links"]
+                [ a [ Href "https://saturnframework.github.io" ] [ str "Saturn" ]
                   str ", "
-                  span [ Href "http://fable.io" ] [ str "Fable" ]
+                  a [ Href "http://fable.io" ] [ str "Fable" ]
                   str ", "
-                  span [ Href "https://elmish.github.io/elmish/" ] [ str "Elmish" ]
+                  a [ Href "https://elmish.github.io/elmish/" ] [ str "Elmish" ]
                   str ", "
-                  span [ Href "https://fulma.github.io/Fulma" ] [ str "Fulma" ]
+                  a [ Href "https://fulma.github.io/Fulma" ] [ str "Fulma" ]
                   str ", "
-                  span [ Href "https://dansup.github.io/bulma-templates/" ] [ str "Bulma\u00A0Templates" ] ]
-    p [] [ strong [] [ str "Manchester F# User Group" ]
+                  a [ Href "https://dansup.github.io/bulma-templates/" ] [ str "Bulma\u00A0Templates" ] ]
+    p [] [ strong [] [ str name ]
            str " powered by: "
            components ]
 
@@ -134,7 +135,7 @@ let content txts =
 let footerContainer =
     Container.container []
         [ Content.content [ Content.Modifiers [ Modifier.TextAlignment(Screen.All, TextAlignment.Centered) ] ]
-              [ p [] [ safeComponents ]
+              [ p [ ClassName "footer-links"] [ safeComponents "Created using SAFE Template" ]
 
                 p []
                     [ a [ Href "https://github.com/SAFE-Stack/SAFE-template" ]
@@ -147,7 +148,7 @@ let view (model : Model) (dispatch : Msg -> unit) =
                              [ Container.container
                                    [ Container.Modifiers [ Modifier.TextAlignment(Screen.All, TextAlignment.Centered) ] ]
                                    [ Heading.p [] [ str "Manchester F# User Group" ]
-                                     Heading.p [ Heading.IsSubtitle ] [ safeComponents ] ] ] ]
+                                     Heading.p [ Heading.IsSubtitle; Heading.CustomClass "main-links"] [ safeComponents "Manchester F# User Group" ] ] ] ]
              yield Container.container []
                    (match model.Meetup with
                    | Some v ->
