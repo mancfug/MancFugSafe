@@ -1,0 +1,71 @@
+{
+    "id": 23243869,
+    "name": "Manchester F# User Group",
+    "status": "active",
+    "link": "https://www.meetup.com/Manchester-F-User-Group/",
+    "urlname": "Manchester-F-User-Group",
+    "description": "<p>Whether it's the day job, or you just have an interest, we are a user group for F# in the Manchester area. We welcome all skills levels, from ninja to curious, and aim to meet on the 4th Tuesday of every month at the Code Computerlove event space NQ.</p> <p>Past meetups can be found on <a href=\"https://www.youtube.com/playlist?list=PL_171ReetFKHkJEqhn00FKhqoyBuDFuBH\">Youtube</a><br></p>",
+    "created": 1491907041000,
+    "city": "Manchester",
+    "untranslated_city": "Manchester",
+    "country": "GB",
+    "localized_country_name": "United Kingdom",
+    "localized_location": "Manchester, United Kingdom",
+    "state": "18",
+    "join_mode": "open",
+    "visibility": "public",
+    "lat": 53.48,
+    "lon": -2.24,
+    "members": 150,
+    "organizer": {
+        "id": 20110521,
+        "name": "Michael Dickens",
+        "bio": "",
+        "photo": {
+            "id": 265748208,
+            "highres_link": "https://secure.meetupstatic.com/photos/member/2/0/1/0/highres_265748208.jpeg",
+            "photo_link": "https://secure.meetupstatic.com/photos/member/2/0/1/0/member_265748208.jpeg",
+            "thumb_link": "https://secure.meetupstatic.com/photos/member/2/0/1/0/thumb_265748208.jpeg",
+            "type": "member",
+            "base_url": "https://secure.meetupstatic.com"
+        }
+    },
+    "who": "Members",
+    "key_photo": {
+        "id": 468370471,
+        "highres_link": "https://secure.meetupstatic.com/photos/event/2/8/e/7/highres_468370471.jpeg",
+        "photo_link": "https://secure.meetupstatic.com/photos/event/2/8/e/7/600_468370471.jpeg",
+        "thumb_link": "https://secure.meetupstatic.com/photos/event/2/8/e/7/thumb_468370471.jpeg",
+        "type": "event",
+        "base_url": "https://secure.meetupstatic.com"
+    },
+    "timezone": "Europe/London",
+    "next_event": {
+        "id": "254644943",
+        "name": "F# Everywhere Intro - SAFE Stack",
+        "yes_rsvp_count": 18,
+        "time": 1556042400000,
+        "utc_offset": 3600000
+    },
+    "category": {
+        "id": 34,
+        "name": "Tech",
+        "shortname": "tech",
+        "sort_name": "Tech"
+    },
+    "meta_category": {
+        "id": 292,
+        "shortname": "tech",
+        "name": "Tech",
+        "sort_name": "Tech",
+        "photo": {
+            "id": 450131949,
+            "highres_link": "https://secure.meetupstatic.com/photos/event/2/e/a/d/highres_450131949.jpeg",
+            "photo_link": "https://secure.meetupstatic.com/photos/event/2/e/a/d/600_450131949.jpeg",
+            "thumb_link": "https://secure.meetupstatic.com/photos/event/2/e/a/d/thumb_450131949.jpeg",
+            "type": "event",
+            "base_url": "https://secure.meetupstatic.com"
+        },
+        "category_ids": [34]
+    }
+}

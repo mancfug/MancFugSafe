@@ -1,4 +1,10 @@
 namespace Shared
 
-type Counter = { Value : int }
+type NextEvent =
+    { Name : string
+      Attendees: int }
 
+type Meetup =
+    { Name : string
+      Details : string
+      NextEvent : NextEvent }

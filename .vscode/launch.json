@@ -1,7 +1,6 @@
 {
     "version": "0.2.0",
-    "configurations": [
-        {
+    "configurations": [{
             "name": "Debug Server",
             "type": "coreclr",
             "request": "launch",
@@ -13,6 +12,9 @@
             },
             "stopAtEntry": false,
             "console": "internalConsole",
+            "env": {
+                "ASPNETCORE_ENVIRONMENT": "Development"
+            }
         },
         {
             "name": "Debug Client",
@@ -33,7 +35,7 @@
             "preLaunchTask": "Watch Client and Server",
             "url": "http://localhost:8080",
             "env": {
-                "vsCodeSession":"true"
+                "vsCodeSession": "true"
             },
             "webRoot": "${workspaceFolder}/src/Client",
             "sourceMaps": true,
@@ -42,10 +44,8 @@
             }
         }
     ],
-    "compounds": [
-        {
-            "name": "Debug SAFE App",
-            "configurations": [ "Debug Server", "Debug Client" ],
-        }
-    ]
+    "compounds": [{
+        "name": "Debug SAFE App",
+        "configurations": ["Debug Server", "Debug Client"],
+    }]
 }
